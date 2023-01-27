@@ -1,0 +1,10 @@
+.listButton {
+    list-style: none;
+}
+
+.button{
+    margin-bottom: 15px;
+    background-color: royalblue;
+    color: white;
+    border: 50%;
+}

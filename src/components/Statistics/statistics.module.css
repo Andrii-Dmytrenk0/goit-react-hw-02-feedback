@@ -1,0 +1,6 @@
+.listStatistics {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}

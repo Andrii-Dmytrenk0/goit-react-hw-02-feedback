@@ -1,26 +1,28 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import css from './statistics.module.css';
+
 
 
 export const Statistics = ({ good, neutral, bad, total, goodPersentage, }) => {
     return (
-        <List>
-            <ListItem>Good: {good}</ListItem>
-            <ListItem>Neutral: {neutral}</ListItem>
-            <ListItem>Bad: {bad}</ListItem>
-            <ListItem>Total: {total}</ListItem>
-            <ListItem>Positive feedback:{goodPersentage}</ListItem>
-        </List>
+        <ul className={css.listStatistics}>
+            <li>Good: {good}</li>
+            <li>Neutral: {neutral}</li>
+            <li>Bad: {bad}</li>
+            <li>Total: {total}</li>
+            <li>Positive feedback: {goodPersentage}</li>
+        </ul>
     )
 }
 
 
 Statistics.propTypes = {
-    good: PropTypes.number.isRequired,
+   good: PropTypes.number.isRequired,
     neutral: PropTypes.number.isRequired,
     bad: PropTypes.number.isRequired,
     total: PropTypes.number.isRequired,
-    goodPersentage: PropTypes.oneOfType([
+    goodPercentage: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number,
     ]).isRequired,
